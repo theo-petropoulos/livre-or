@@ -1,4 +1,9 @@
+html {
+  background: #E8E8E8;
+}
+
 #body_accueil {
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,11 +18,94 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  font-family: 'Nerko One', Courier;
+}
+
+#body_accueil header {
+  width: 100%;
 }
 
 #body_accueil h1 {
-  color: red;
+  color: white;
   font-size: 2.5em;
+  text-shadow: 2px 0 black, 0 2px black, -2px 0 black, 0 -2px black;
+  background: #445089;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-top: 0;
+}
+
+#body_accueil h2 {
+  color: white;
+  font-size: 2em;
+  text-shadow: 1px 0 black, 0 1px black, -1px 0 black, 0 -1px black;
+}
+
+#body_accueil details {
+  font-size: 1.5em;
+  background: #445089;
+  border-radius: 10px;
+  color: #8892BF;
+  width: 20%;
+  margin: auto auto 5% auto;
+}
+
+#body_accueil details:hover {
+  background: #8892BF;
+  color: white;
+}
+
+#body_accueil details ul {
+  margin: 0;
+}
+
+#body_accueil details ul form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#body_accueil details ul form input {
+  font-family: 'Nerko One', Courier;
+  font-size: 1em;
+  color: #6656AD;
+  background: none;
+  border: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+#body_accueil details ul form input:hover {
+  cursor: pointer;
+}
+
+#body_accueil details ul li {
+  background: #A7DEC2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#body_accueil details ul li:hover {
+  background: #E4A628;
+}
+
+#body_accueil details ul li:hover a {
+  color: white;
+}
+
+#body_accueil details ul li a {
+  text-decoration: none;
+  color: #6656AD;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 #body_accueil img {
@@ -30,16 +118,6 @@
 #body_accueil li, #body_accueil summary {
   list-style-type: none;
   margin: 0;
-}
-
-#body_accueil li a, #body_accueil summary a {
-  text-decoration: none;
-  color: brown;
-}
-
-#body_accueil li a:hover, #body_accueil summary a:hover {
-  background: grey;
-  color: white;
 }
 
 #body_accueil li:hover, #body_accueil summary:hover {
@@ -67,7 +145,22 @@
   animation: rotating 7s linear infinite;
 }
 
-#body_profile {
+#body_accueil #alert {
+  display: block;
+  width: 60%;
+  margin: auto;
+  padding: 3%;
+  background: #E5D992;
+  border-radius: 10px;
+}
+
+#body_accueil p {
+  font-size: 1.3em;
+  color: white;
+  text-shadow: 1px 0 black, 0 1px black, -1px 0 black, 0 -1px black;
+}
+
+#body_connexion, #body_inscription, #body_profile, #body_comment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,15 +171,39 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
-#body_profile input[type=submit] {
-  display: block;
-  margin: auto;
+#body_connexion label, #body_inscription label, #body_profile label, #body_comment label {
+  background: #445089;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 1% 3% 1% 3%;
+  text-shadow: 1px 0 black, 0 1px black, -1px 0 black, 0 -1px black;
+  border-radius: 10px;
+}
+
+#body_connexion input, #body_inscription input, #body_profile input, #body_comment input {
+  margin: 5%;
+}
+
+#body_connexion input[type=submit], #body_inscription input[type=submit], #body_profile input[type=submit], #body_comment input[type=submit] {
+  background: #A7DEC2;
+  color: grey;
+  border: none;
+  border-radius: 10px;
+  padding: 3%;
+}
+
+#body_connexion input[type=submit]:hover, #body_inscription input[type=submit]:hover, #body_profile input[type=submit]:hover, #body_comment input[type=submit]:hover {
+  cursor: pointer;
+  background: #3B8CE8;
+  color: white;
 }
 
 #body_livre {

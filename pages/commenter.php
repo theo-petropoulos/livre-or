@@ -42,7 +42,7 @@
 		<script src="https://kit.fontawesome.com/9ddb75d515.js" crossorigin="anonymous"></script>
 	</head>
 
-    <body>
+    <body id="body_comment">
         <header>
             <h1>Laissez votre message</h1>
             <h2>B&B La Plateforme_</h2>

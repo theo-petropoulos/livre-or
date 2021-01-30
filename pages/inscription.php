@@ -43,7 +43,7 @@
 		<script src="https://kit.fontawesome.com/9ddb75d515.js" crossorigin="anonymous"></script>
 	</head>
 
-    <body>
+    <body id="body_inscription">
         <?php if(!isset($_POST) || empty($_POST)){?>
         <section id="subscr_section">
             <form method="post" action="inscription.php">

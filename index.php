@@ -19,7 +19,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type='text/css' href="css/livreor.css?v=<?php echo time(); ?>">
-		<link rel="icon" href="" />
+        <link rel="icon" href="" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet"> 
 		<script src="https://kit.fontawesome.com/9ddb75d515.js" crossorigin="anonymous"></script>
 	</head>
 
@@ -27,7 +29,6 @@
         <header>
             <h1>La Plateforme_</h1>
             <h2>Bed & Breakfast</h2>
-            <h3>J'ai juste besoin de 3 points en SQL</h3>
             <details>
                 <summary>Menu</summary>
                     <ul>
@@ -54,7 +55,7 @@
     
         <main>
             <img src="assets/bbhouse.webp">
-            <p>Bienvenue sur le site de notre gite "La Plateforme_" situé au coeur de Marseille.<br>
+            <p>Bienvenue sur le site de notre gîte "La Plateforme_" situé au coeur de Marseille.<br>
             <span id="alert">En cette période de crise sanitaire, votre Bed & Breakfast sera fermé jusqu'à nouvel ordre.</span>
             Vous avez séjourné chez nous et souhaitez nous laisser un mot ? <br>
             Vous êtes au bon endroit, nous lisons tous vos chaleureux messages et espérons vous retrouver dans les plus brefs délais.
