@@ -24,10 +24,7 @@
         else{
             $mpassword=password_hash($mpassword, PASSWORD_DEFAULT);
             $stmt=$db->prepare("UPDATE `utilisateurs` SET `login`=?, `password`=? WHERE `login`=?");
-            $stmt->bindParam(1, $mlogin, PDO::PARAM_STR);
-            $stmt->bindParam(2, $mpassword, PDO::PARAM_STR);
-            $stmt->bindParam(3, $login, PDO::PARAM_STR);
-            $stmt->execute();
+            $stmt->execute([$mlogin, $mpassword, $login]);
             echo "Votre compte a bien été mis à jour. Retour à l'"?>
                 <form method="post" action="../index.php">
                     <input type="hidden" value="ok" name="connected">

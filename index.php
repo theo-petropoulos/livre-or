@@ -40,7 +40,7 @@
                         <li><a href="pages/profil.php">Profil</a></li>
                         <li><a href="pages/commenter.php">Laisser un message</a></li>
                         <?php }?>
-                        <li><a href="pages/livreor.php">Livre d'Or</a></li>
+                        <li><a href="pages/livre-or.php">Livre d'Or</a></li>
                         <?php if(isset($_SESSION['connected']) && $_SESSION['connected']='success'){?>
                         <li><form method="post" action="index.php">
                             <input type="hidden" name="disconnect" value="ok">

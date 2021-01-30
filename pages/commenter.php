@@ -6,8 +6,7 @@
     if(isset($_POST['comment']) && $_POST['comment']){
         $login=$_SESSION['login']; $db=$_SESSION['db']; $message=$_POST['comment']; $date=date('Y/m/d',time());
         $stmt=$db->prepare("SELECT * FROM `utilisateurs` WHERE `login`=?");
-        $stmt->bindParam(1, $login, PDO::PARAM_STR);
-        $stmt->execute();
+        $stmt->execute([$login]);
         $result_user=$stmt->fetch(PDO::FETCH_ASSOC);
         if(empty($result_user)){
             echo "Vous n'avez pas l'autorisation d'effectuer ceci.";
@@ -16,20 +15,15 @@
         }
         $id=$result_user['id'];
         $stmt=$db->prepare("SELECT * FROM `commentaires` WHERE `id_utilisateur`=?");
-        $stmt->bindParam(1, $id, PDO::PARAM_INT);
-        $stmt->execute();
+        $stmt->execute([$id]);
         $result_mess=$stmt->fetch(PDO::FETCH_ASSOC);
         if(!empty($result_mess) && $stmt->rowCount()>2){
             echo "Vous ne pouvez plus poster de message.";
             $_SESSION['db']=NULL;
             exit();
         }
-        echo $message . "<br>" . $id . "<br>" . $date;
         $stmt=$db->prepare("INSERT INTO `commentaires` (`commentaire`, `id_utilisateur`, `date`) VALUES (?,?,?)");
-        $stmt->bindParam(1, $message, PDO::PARAM_STR);
-        $stmt->bindParam(2, $id, PDO::PARAM_INT);
-        $stmt->bindParam(3, $date, PDO::PARAM_STR);
-        $stmt->execute();
+        $stmt->execute([$message, $id, $date]);
         echo "Nous vous remercions pour votre message. Retour à l'";?><a href="../index.php">Accueil</a><?php
     }
 

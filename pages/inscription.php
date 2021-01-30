@@ -19,9 +19,7 @@
             if(empty($result)){
                 $password=password_hash($password, PASSWORD_DEFAULT);
                 $insert=$db->prepare("INSERT INTO `utilisateurs` (`login`,`password`) VALUES (?,?)");
-                $insert->bindParam(1, $login, PDO::PARAM_STR);
-                $insert->bindParam(2, $password, PDO::PARAM_STR);
-                $insert->execute();
+                $insert->execute([$login, $password]);
                 echo "Votre inscription a bien été enregistrée.";?><a href="../index.php">Accueil</a><?php
             }
             else{
